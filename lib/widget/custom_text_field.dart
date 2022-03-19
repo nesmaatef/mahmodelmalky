@@ -5,7 +5,8 @@ class CustemTextFormField extends StatelessWidget {
   String? hint;
   bool? prefix;
   bool? suffix;
-  CustemTextFormField({this.hint, this.prefix, this.suffix});
+  CustemTextFormField({Key? key, this.hint, this.prefix, this.suffix})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

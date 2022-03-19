@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mahmodelmalky/const/color.dart';
 
 class CustemButton extends StatelessWidget {
@@ -12,9 +11,9 @@ class CustemButton extends StatelessWidget {
     return TextButton(
       child: Text(
         text!,
-        style: GoogleFonts.montserrat(
-          textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
+        // style: GoogleFonts.montserrat(
+        //   textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        // ),
       ),
       style: TextButton.styleFrom(
         primary: Colors.white,
