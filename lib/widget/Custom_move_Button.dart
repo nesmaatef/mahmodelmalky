@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+
+// ignore: must_be_immutable
 class CustomMoveButton extends StatelessWidget {
-  String ? text;
+  String? text;
   VoidCallback? onPressed;
+  TextStyle? style;
 
-  CustomMoveButton({this.text, this.onPressed});
-
-
+  CustomMoveButton({
+    Key? key,
+    this.text,
+    this.onPressed,
+    this.style,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +22,8 @@ class CustomMoveButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(4),
           color: const Color(0xffEAA900)),
       child: TextButton(
-        child: Text(text!,
-          style: TextStyle(color: Colors.white),
-        ),
-        onPressed:() => onPressed,
+        child: Text(text!, style: style),
+        onPressed: () => onPressed,
       ),
     );
   }
