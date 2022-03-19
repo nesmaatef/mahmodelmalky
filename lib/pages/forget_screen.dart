@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mahmodelmalky/widget/Custom_move_Button.dart';
 import 'package:mahmodelmalky/widget/custem_logo.dart';
 import 'package:mahmodelmalky/widget/custom_text_field.dart';
 
@@ -13,49 +14,49 @@ class ForgetPasswordScreen extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
-            CustemLogo(),
-            SizedBox(
+            const CustemLogo(),
+            const SizedBox(
               height: 30,
             ),
             Image.asset('lib/images/lock.png'),
-            SizedBox(
+            const SizedBox(
               height: 26,
             ),
-            Text(
+            const Text(
               'Reset Your Password',
               style: TextStyle(
                   color: Color(0xff111111),
                   fontWeight: FontWeight.w500,
                   fontSize: 20),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
             Image.asset('lib/images/line.png'),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Text(
+            const Text(
               'Please enter your registered Email ID',
               style: TextStyle(
                   color: Color(0xff111111),
                   fontWeight: FontWeight.w500,
                   fontSize: 16),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               'We will send a verification code to your registered Email ID',
               style: TextStyle(
                   color: Color(0xff111111),
                   fontWeight: FontWeight.w400,
                   fontSize: 14),
             ),
-            SizedBox(
+            const SizedBox(
               height: 46,
             ),
             CustemTextFormField(
@@ -63,7 +64,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               prefix: true,
               suffix: false,
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Padding(
@@ -71,38 +72,47 @@ class ForgetPasswordScreen extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // if (_currentStep != 0)
-                    Container(
-                      width: 128,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: Color(0xffEAA900)),
-                      child: TextButton(
-                        child: Text(
-                          'Next',
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                        onPressed: () {},
-                      ),
+                    CustomMoveButton(
+                      text: 'Previous',
+                      onPressed: () {},
                     ),
-                    const SizedBox(
+                    // if (_currentStep != 0)
+                    // Container(
+                    //   width: 128,
+                    //   height: 45,
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(4),
+                    //       color: const Color(0xffEAA900)),
+                    //   child: TextButton(
+                    //     child: const Text(
+                    //       '',
+                    //       style: TextStyle(color: Colors.white),
+                    //     ),
+                    //     onPressed: () {},
+                    //   ),
+                    // ),
+                    SizedBox(
                       width: 5,
                     ),
-                    Container(
-                      width: 128,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: Color(0xffEAA900)),
-                      child: TextButton(
-                        child: Text(
-                          'Next',
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                        onPressed: () {},
-                      ),
-                    ),
+                    CustomMoveButton(
+                      text: 'Next',
+                      onPressed: () {},
+                    )
+                    // ),
+                    // Container(
+                    //   width: 128,
+                    //   height: 45,
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(4),
+                    //       color: const Color(0xffEAA900)),
+                    //   child: TextButton(
+                    //     child: const Text(
+                    //       'Next',
+                    //       style: TextStyle(color: Colors.white),
+                    //     ),
+                    //     onPressed: () {},
+                    //   ),
+                    // ),
                     // onPressed: onStepContinue,
                   ]),
             ),

@@ -4,7 +4,7 @@ import 'package:mahmodelmalky/const/color.dart';
 class CustemButton extends StatelessWidget {
   String? text;
   Color? color;
-  CustemButton({this.text, this.color});
+  CustemButton({Key? key, this.text, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
