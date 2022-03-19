@@ -6,12 +6,8 @@ class CustomMoveButton extends StatelessWidget {
   VoidCallback? onPressed;
   TextStyle? style;
 
-  CustomMoveButton({
-    Key? key,
-    this.text,
-    this.onPressed,
-    this.style,
-  }) : super(key: key);
+  CustomMoveButton({Key? key, this.text, this.onPressed, this.style})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
