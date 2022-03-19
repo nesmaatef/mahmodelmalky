@@ -91,7 +91,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                     //     onPressed: () {},
                     //   ),
                     // ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     CustomMoveButton(
