@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mahmodelmalky/pages/congrates_screen.dart';
 import 'package:mahmodelmalky/pages/new_password_screen.dart';
 import 'package:mahmodelmalky/pages/splash.dart';
 
@@ -15,11 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        backgroundColor: Colors.white
-      ),
-      home:  NewPasswordScreen(),
+      theme:
+          ThemeData(primarySwatch: Colors.blue, backgroundColor: Colors.white),
+      home: const CongratesScreen(),
     );
   }
 }

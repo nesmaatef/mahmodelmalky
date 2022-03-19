@@ -17,7 +17,6 @@ class CustemButton extends StatelessWidget {
       ),
       style: TextButton.styleFrom(
         primary: Colors.white,
-        backgroundColor: color!,
         shape: const BeveledRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(2))),
       ),
