@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mahmodelmalky/pages/new_password_screen.dart';
 import 'package:mahmodelmalky/pages/splash.dart';
 
 void main() {
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        backgroundColor: Colors.white
       ),
-      home: const Splash(),
+      home:  NewPasswordScreen(),
     );
   }
 }
