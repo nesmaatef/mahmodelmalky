@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mahmodelmalky/const/color.dart';
-import 'package:mahmodelmalky/const/custem_logo.dart';
-import 'package:mahmodelmalky/const/custom_text_field.dart';
-import 'package:mahmodelmalky/const/custombutton.dart';
+import 'package:mahmodelmalky/pages/forget_screen.dart';
+import 'package:mahmodelmalky/widget/custem_logo.dart';
+import 'package:mahmodelmalky/widget/custom_text_field.dart';
+import 'package:mahmodelmalky/widget/custombutton.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -12,13 +11,14 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                height: 30,
+                height: 35,
               ),
               CustemLogo(),
               SizedBox(
@@ -26,24 +26,24 @@ class SignIn extends StatelessWidget {
               ),
               Text(
                 'Welcome Back!',
-                style: GoogleFonts.montserrat(
-                  textStyle: const TextStyle(
-                      color: Colors.black87,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w400),
-                ),
+                // style: GoogleFonts.montserrat(
+                //   textStyle: TextStyle(
+                //       color: Colors.black87,
+                //       fontSize: 25,
+                //       fontWeight: FontWeight.w400),
+                // ),
               ),
               SizedBox(
                 height: 20,
               ),
               Text(
                 'Lets share your talent with world',
-                style: GoogleFonts.montserrat(
-                  textStyle: const TextStyle(
-                      color: Colors.black87,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal),
-                ),
+                // style: GoogleFonts.montserrat(
+                //   textStyle: const TextStyle(
+                //       color: Colors.black87,
+                //       fontSize: 16,
+                //       fontWeight: FontWeight.normal),
+                // ),
               ),
               SizedBox(
                 height: 30,
@@ -75,13 +75,22 @@ class SignIn extends StatelessWidget {
                     'Remember Me',
                   ),
                   Spacer(),
-                  Text(
-                    'Forget Password?',
-                    style: GoogleFonts.montserrat(
-                      textStyle: const TextStyle(
-                          color: secondColor,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ForgetPasswordScreen(),
+                          ));
+                    },
+                    child: Text(
+                      'Forget Password?',
+                      // style: GoogleFonts.montserrat(
+                      //   textStyle: const TextStyle(
+                      //       color: secondColor,
+                      //       fontSize: 15,
+                      //       fontWeight: FontWeight.normal),
+                      // ),
                     ),
                   ),
                   SizedBox(
@@ -112,24 +121,24 @@ class SignIn extends StatelessWidget {
                 children: [
                   Text(
                     'Don\'t have an account!',
-                    style: GoogleFonts.montserrat(
-                      textStyle: const TextStyle(
-                          color: Colors.black87,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal),
-                    ),
+                    // style: GoogleFonts.montserrat(
+                    //   textStyle: const TextStyle(
+                    //       color: Colors.black87,
+                    //       fontSize: 15,
+                    //       fontWeight: FontWeight.normal),
+                    // ),
                   ),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
                     'SignUp',
-                    style: GoogleFonts.montserrat(
-                      textStyle: const TextStyle(
-                          color: secondColor,
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal),
-                    ),
+                    // style: GoogleFonts.montserrat(
+                    //   textStyle: const TextStyle(
+                    //       color: secondColor,
+                    //       fontSize: 15,
+                    //       fontWeight: FontWeight.normal),
+                    // ),
                   ),
                 ],
               ),
